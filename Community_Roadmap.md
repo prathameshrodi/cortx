@@ -30,11 +30,11 @@
             <td>Dec</td>            
         </tr>
         <tr>
-            <td>Hackathons</td>
+            <td><a href=doc/CORTX_Hackathon.rst>Hackathons</a></td>
             <td></td>
             <td></td>
             <td></td>
-            <td> <img src="https://www.countryflags.io/il/flat/64.png"> </td>
+            <td> <img src="https://www.countryflags.io/il/flat/64.png"><br><a href=doc/First_Hackathon.rst>LINK</a></td>
             <td></td>
             <td></td>
             <td>:earth_africa:</td>
@@ -49,12 +49,19 @@
             <td> <img src="https://www.countryflags.io/ie/flat/64.png"> </td>            
         </tr>
         <tr>
-        <td>Newsletter</td>
-        <td>:heavy_check_mark:</td>
-        <td>:heavy_check_mark:</td>
-        <td>:heavy_check_mark:</td>
-        <td>:heavy_check_mark:</td>
-        <td>:heavy_check_mark:</td>
+        <td><a href=https://github.com/Seagate/cortx/tree/main/doc/PDFs/Newsletters>Newsletters</a>
+</td>
+        <td></td>
+        <td></td>
+        <td>:heavy_check_mark:
+        <a href=/doc/PDFs/Newsletters/November%202020%20Newsletter.pdf>PDF</a>
+        </td>
+        <td>:heavy_check_mark:
+        <a href=/doc/PDFs/Newsletters/December%202020%20Newsletter.pdf>PDF</a>
+        </td>
+        <td>:heavy_check_mark:
+        <a href=/doc/PDFs/Newsletters/January%202021%20Newsletter.pdf>PDF</a>
+        </td>
         <td>:heavy_check_mark:</td>
         <td>:heavy_check_mark:</td>
         <td>:heavy_check_mark:</td>
@@ -68,15 +75,15 @@
         <td>:heavy_check_mark:</td>
         </tr>
         <tr>
-        <td>Releases</td>
-        <td>:heavy_check_mark:</td>
+        <td><a href=https://github.com/Seagate/cortx/releases>Releases</a></td>
+        <td>:heavy_check_mark:<br><a href=https://github.com/Seagate/cortx/releases/tag/VA>LINK</a></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>:heavy_check_mark:</td>
+            <td>:heavy_check_mark:</td>
         <td></td>
         <td>:heavy_check_mark:</td>
         <td></td>
@@ -87,12 +94,12 @@
         <td>:heavy_check_mark:</td>
         </tr>
         <tr>
-        <td>Webinar</td>
+        <td><a href=doc/meetings/README.rst>Webinars</a></td>
         <td></td>
         <td></td>
-        <td>:heavy_check_mark:</td>
-        <td>:heavy_check_mark:</td>
-        <td>:heavy_check_mark:</td>
+        <td>:heavy_check_mark:<br><a href=doc/meetings/README.rst>LINK</a></td>
+        <td>:heavy_check_mark:<br><a href=doc/meetings/README.rst>LINK</a></td>
+        <td>:heavy_check_mark:<br><a href=doc/meetings/README.rst>LINK</a></td>
         <td>:heavy_check_mark:</td>
         <td>:heavy_check_mark:</td>
         <td>:heavy_check_mark:</td>
