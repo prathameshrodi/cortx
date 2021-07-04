@@ -11,24 +11,8 @@ Create a virtual machine.
 
 ### 1.2. Install the RPMs
 
-* Install Consul.
-  ```sh
-  sudo yum -y install yum-utils
-  sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
-  sudo yum -y install consul-1.7.8
-  ```
-
-* Add 'last_successful' yum repository.
-  ```bash
-  REPO=cortx-storage.colo.seagate.com/releases/cortx
-  REPO+=/github/release/rhel-7.7.1908/last_successful/
-
-  sudo yum-config-manager --add-repo="http://$REPO"
-  sudo tee -a /etc/yum.repos.d/${REPO//\//_}.repo <<< 'gpgcheck=0'
-  ```
-
 * Build and Install RPMs.
-Follow the [Hare User Guide](https://github.com/Seagate/cortx-hare#installation) to Build and Install Hare from source.
+Follow the [Hare User Guide](https://github.com/Seagate/cortx-hare#installation) to Build and Install Hare from source. This guide will also show you how to build and install Motr.
 
   
 ### 1.3. Configure LNet
@@ -148,6 +132,12 @@ For e.g,
   ```bash
   cmp random.img random_from_motr.img
   ```
+
+* Notes:
+
+  * Make sure that size of the source file (random.img) is greater than or equal to block size * count (*i.e. 1M * 128 = 128M here*). Otherwise errors may happen. See [this issue](https://github.com/Seagate/cortx-motr/issues/10#issuecomment-691633983). 
+  * If source file size is 128.5M, then only 128M data will be written to Motr. Therefore, please pick a proper block size and make your test file size == block size * count.
+  * Consider using [go/mcp](https://github.com/Seagate/cortx-motr/tree/main/bindings/go), which is more user friendly. It calculates the optimal unit and block size automatically based on the object size and pool parity configuration. For the example above, go/mcp can automatically write the entire 128.5M data to Motr.
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 ## 2. Dual-node setup
@@ -341,11 +331,11 @@ Create a virtual machine.
 ### 3.2. Generate SSH keys
 
 Follow
-[these steps](CortxMotrQuickStart.md#Accessing-the-code-right-way).
+[these steps](SSH_Public_Key.rst).
 
 ### 3.3. Get Motr sources
 
-Follow [these steps](CortxMotrQuickStart.md#Cloning-CORTX).
+Follow [these steps](https://github.com/Seagate/cortx-motr/blob/main/doc/Quick-Start-Guide.rst#cloning-the-source-code).
 
 ### 3.4. Compile and install Motr
 
